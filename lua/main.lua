@@ -1,6 +1,7 @@
 local sorting = require "lua-sorting/bubble"
 
-local array = {5,2,1,3,4}
+local array = {5,1,3,4,8,6,7,2,10,9}
+
 local sortedArray = sorting.bubble(array)
 
 local function printArrays(inputArray)
