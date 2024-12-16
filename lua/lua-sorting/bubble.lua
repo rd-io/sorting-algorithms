@@ -1,5 +1,6 @@
 local sort = {}
 
+sort.steps = 0
 function sort.bubble(array)
 
     local function deepClone(obj)
@@ -14,12 +15,11 @@ function sort.bubble(array)
     end
 
     local newArray = deepClone(array)
-
     local j = #newArray
-    local length = #newArray
 
     while j > 0 do
-        for i = 2, length do
+        for i = 2, j do
+            sort.steps = sort.steps + 1
             if(newArray[i-1] > newArray[i]) then
                 local temp = newArray[i]
                 newArray[i] = newArray[i-1]
