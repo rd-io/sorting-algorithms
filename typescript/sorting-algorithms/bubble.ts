@@ -1,9 +1,3 @@
-const test = (): void => {
-    console.log("This is a test");
-}
-
-// array = [8,2,3,5,1,4,7,6,10,9]
-
 const bubbleSort = (array: Number[]): Number[] => {
 
     const newArray: Number[] = structuredClone(array)
@@ -28,4 +22,4 @@ const bubbleSort = (array: Number[]): Number[] => {
     return newArray;
 }
 
-export { test, bubbleSort };
+export { bubbleSort };
