@@ -1,5 +1,5 @@
-import { bubbleSort } from './sorting-algorithms/bubble';
+import { bubbleSort } from './typescript-sorting/bubble';
 
-const unsortedArray: Number[] = [2,1,9,4,6,];
+const unsortedArray: number[] = [2,1,9,4,6,];
 
 bubbleSort(unsortedArray);

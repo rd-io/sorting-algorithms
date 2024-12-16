@@ -1,6 +1,6 @@
-const bubbleSort = (array: Number[]): Number[] => {
+const bubbleSort = (array: number[]): number[] => {
 
-    const newArray: Number[] = structuredClone(array)
+    const newArray: number[] = structuredClone(array)
     let j: number = newArray.length;
     let steps = 0;
 
