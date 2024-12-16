@@ -1,3 +1,5 @@
-import { test } from './sorting-algorithms/bubble';
+import { bubbleSort } from './sorting-algorithms/bubble';
 
-test();
+const unsortedArray: Number[] = [2,1,9,4,6,];
+
+bubbleSort(unsortedArray);
