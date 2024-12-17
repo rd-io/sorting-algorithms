@@ -1,7 +1,10 @@
-local sorting = require "lua-sorting/bubble"
+local bubbleSort = require "lua-sorting/bubble"
+local selectionSort = require "lua-sorting/selection"
 
 local array = {5,1,3,4,8,6,7,2,10,9}
-local sortedArray = sorting.bubble(array)
+
+-- local sortedArray = bubbleSort.bubble(array)
+local sortedArray = selectionSort.selection(array)
 
 local function printArrays(inputArray)
     local res = ""
@@ -14,4 +17,4 @@ end
 
 print("\nStarting values: " .. printArrays(array))
 print("Ending values: " .. printArrays(sortedArray))
-print("This was completed in " .. sorting.steps .. " steps.\n")
+print("This was completed in " .. selectionSort.steps .. " steps.\n")

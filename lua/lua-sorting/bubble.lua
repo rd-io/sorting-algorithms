@@ -3,7 +3,9 @@ local sort = {}
 sort.steps = 0
 
 function sort.bubble(array)
-    
+
+    print("\nBubble Sort")
+
     local function deepClone(obj)
         if type(obj) ~= 'table' then
             return obj
