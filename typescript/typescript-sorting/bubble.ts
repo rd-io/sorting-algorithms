@@ -1,25 +1,23 @@
+let steps = 0;
+
 const bubbleSort = (array: number[]): number[] => {
 
     const newArray: number[] = structuredClone(array)
     let j: number = newArray.length;
-    let steps = 0;
 
     while(j > 0) {
         for(let i: number = 1; i < j; i++ ) {
-            steps++
+            steps++;
             if(newArray[i-1] > newArray[i]) {
                 const temp = newArray[i-1];
                 newArray[i-1] = newArray[i];
                 newArray[i] = temp;
             }
         }
-    j--
+    j--;
     }
 
-    console.log("\nStarting array: ", array)
-    console.log("Ending array: ", newArray)
-    console.log(`This was completed in ${steps} steps.\n`)
     return newArray;
 }
 
-export { bubbleSort };
+export { bubbleSort, steps };

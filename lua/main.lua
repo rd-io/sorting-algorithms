@@ -5,12 +5,10 @@ local sortedArray = sorting.bubble(array)
 
 local function printArrays(inputArray)
     local res = ""
-
     for i = 1, #inputArray -1 do
         res = res .. inputArray[i] .. ", "
     end
     res = res .. inputArray[#inputArray]
-
     return res
 end
 
