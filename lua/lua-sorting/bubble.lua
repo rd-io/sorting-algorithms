@@ -3,6 +3,7 @@ local sort = {}
 sort.steps = 0
 
 function sort.bubble(array)
+    
     local function deepClone(obj)
         if type(obj) ~= 'table' then
             return obj
