@@ -1,3 +1,5 @@
+local deepClone = require "functions/deepClone"
+
 local sort = {}
 
 sort.steps = 0
@@ -5,17 +7,6 @@ sort.steps = 0
 function sort.selection(array)
 
     print("\nSelection Sort")
-
-    local function deepClone(obj)
-        if type(obj) ~= "table" then
-            return obj
-        end
-        local res = {}
-        for k, v in pairs(obj) do
-            res[deepClone(k)] = deepClone(v)
-        end
-        return res
-    end
 
     local newArray = deepClone(array)
     local j = #newArray
