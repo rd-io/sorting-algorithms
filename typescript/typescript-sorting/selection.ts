@@ -3,7 +3,7 @@ let steps2: number = 0;
 const selectionSort = (array: number[]): number[] => {
 
     const newArray: number[] = structuredClone(array);
-    let j: number = array.length - 1;
+    let j: number = newArray.length - 1;
 
     while(j > 0) {
         let biggestNumber: number = newArray[0];
