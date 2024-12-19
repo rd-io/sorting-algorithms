@@ -2,7 +2,8 @@ local deepClone = require "functions/deepClone"
 
 local sort = {}
 
-sort.steps = 0
+sort.checks = 0
+sort.swaps = 0
 
 function sort.selection(array)
 
@@ -15,7 +16,7 @@ function sort.selection(array)
         local biggestNumber = newArray[1]
         local biggestNumberLocation = 1
         for i = 2, j, 1 do
-            sort.steps = sort.steps + 1
+            sort.checks = sort.checks + 1
             if (newArray[i] > biggestNumber) then
                 biggestNumber = newArray[i]
                 biggestNumberLocation = i
@@ -25,6 +26,7 @@ function sort.selection(array)
             local temp = newArray[j]
             newArray[j] = biggestNumber
             newArray[biggestNumberLocation] = temp
+            sort.swaps = sort.swaps + 1
         end
         j = j - 1
     end

@@ -2,7 +2,8 @@ local deepClone = require "functions/deepClone"
 
 local sort = {}
 
-sort.steps = 0
+sort.checks = 0
+sort.swaps = 0
 
 function sort.bubble(array)
 
@@ -13,11 +14,12 @@ function sort.bubble(array)
 
     while j > 0 do
         for i = 2, j do
-            sort.steps = sort.steps + 1
+            sort.checks = sort.checks + 1
             if(newArray[i-1] > newArray[i]) then
                 local temp = newArray[i]
                 newArray[i] = newArray[i-1]
                 newArray[i-1] = temp
+                sort.swaps = sort.swaps + 1
             end
         end
         j = j - 1
