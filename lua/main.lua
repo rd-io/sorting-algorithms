@@ -2,8 +2,8 @@
 -- local selectionSort = require "lua-sorting/selection"
 local insertionSort = require "lua-sorting/insertion"
 
--- local array = {5,1,3,4,8,6,7,2,10,9}
-local array = {1,2,3,4,5,6,7,9,10,8}
+local array = {5,1,3,4,8,6,7,2,10,9}
+-- local array = {1,2,3,4,5,6,7,9,10,8}
 
 -- local sortedArray = bubbleSort.bubble(array)
 -- local sortedArray = selectionSort.selection(array)
