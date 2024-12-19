@@ -1,17 +1,21 @@
-let steps = 0;
+let bubbleSwaps: number = 0;
+let bubbleChecks: number = 0;
+
+console.log("\nBubble Sort")
 
 const bubbleSort = (array: number[]): number[] => {
 
-    const newArray: number[] = structuredClone(array)
+    const newArray: number[] = structuredClone(array);
     let j: number = newArray.length;
 
     while(j > 0) {
         for(let i: number = 1; i < j; i++ ) {
-            steps++;
+            bubbleChecks++
             if(newArray[i-1] > newArray[i]) {
                 const temp = newArray[i-1];
                 newArray[i-1] = newArray[i];
                 newArray[i] = temp;
+                bubbleSwaps++
             }
         }
     j--;
@@ -20,4 +24,4 @@ const bubbleSort = (array: number[]): number[] => {
     return newArray;
 }
 
-export { bubbleSort, steps };
+export { bubbleSort, bubbleSwaps, bubbleChecks };
