@@ -42,9 +42,9 @@ Insertion: 12 swaps and 20 checks
 
           Almost Sorted
 -----------------------------------
-// Bubble: 2 swaps and 45 checks
-// Selection: 2 swaps and 45 checks
-// Insertion: 2 swaps and 11 checks
+Bubble: 2 swaps and 45 checks
+Selection: 2 swaps and 45 checks
+Insertion: 2 swaps and 11 checks
 
 */
 
