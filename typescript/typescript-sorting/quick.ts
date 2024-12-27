@@ -10,8 +10,10 @@ const quickSort = (array: number[]): number[] => {
 
     const sort = (array: number[], start: number, end: number) => {
 
+        console.log("start: ", start, "\nend: ", end)
+
         if(start === end) {
-            return array;
+            return 0;
         }
 
         let i: number = start;
@@ -38,11 +40,11 @@ const quickSort = (array: number[]): number[] => {
             }
         }
 
+        console.log("i: ", i, "\nj: ", j);
         sort(array, 0, i - 1);
-        //sort(array, j + 1, array.length)
+        // sort(array, j + 1, array.length - 1);
 
         return array;
-
     }
 
     return sort(newArray, 0, newArray.length -1);
