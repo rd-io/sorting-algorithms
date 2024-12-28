@@ -7,47 +7,68 @@ const quickSort = (array: number[]): number[] => {
 
     const newArray: number[] = structuredClone(array);
 
+    const sort = (array: number[]) => {
 
-    const sort = (array: number[], start: number, end: number) => {
+        console.log(array);
+        
+        let i: number = 0;
+        let j: number = array.length;
 
-        console.log("start: ", start, "\nend: ", end)
-
-        if(start === end) {
-            return 0;
+        if(j <= 1) {
+            return array;
         }
 
-        let i: number = start;
-        let j: number = end;
-        let pivotLeft: boolean = false;
+        const leftArray: number[] = [];
+        const rightArray: number[] = [];
+
+        let leftShift: boolean = false;
 
         while(i !== j) {
             if(array[i] > array[j]) {
                 array[i] = array[i] + array[j];
                 array[j] = array[i] - array[j];
                 array[i] = array[i] - array[j];
-
-                if(pivotLeft === false) {
-                    pivotLeft = true
+                if (leftShift === false) {
+                    leftShift = true;
                 } else {
-                    pivotLeft = false
+                    leftShift = false;
                 }
+                quickSwaps++
             }
-
-            if(pivotLeft === false) {
+            quickChecks++
+            if(leftShift === false) {
                 j--;
             } else {
                 i++;
             }
         }
 
-        console.log("i: ", i, "\nj: ", j);
-        sort(array, 0, i - 1);
-        // sort(array, j + 1, array.length - 1);
+        for(let z = 0; z < array.length; z++) {
+            if(z < i) {
+                leftArray[z] = array[z];
+            } else if(z > i) {
+                rightArray[z-i-1] = array[z];
+            }
+        }
 
-        return array;
+
+        const returnArray: number[] = [];
+
+        if(leftArray[0] !== undefined) {
+            returnArray.push(...sort(leftArray))
+        }
+        if(array[i] !== undefined) {
+            returnArray.push(array[i])
+        }
+        if(rightArray[0] !== undefined) {
+            returnArray.push(...sort(rightArray))
+        }
+
+        return returnArray;
+
     }
 
-    return sort(newArray, 0, newArray.length -1);
+    return sort(newArray);
 
 }
 

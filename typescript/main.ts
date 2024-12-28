@@ -1,9 +1,12 @@
+"use strict";
+
 // import { bubbleSort, bubbleSwaps, bubbleChecks } from './typescript-sorting/bubble';
 // import { selectionSort, selectionSwaps, selectionChecks } from './typescript-sorting/selection';
 // import { insertionSort, insertSwaps, insertChecks } from './typescript-sorting/insertion';
 import { quickSort, quickSwaps, quickChecks } from './typescript-sorting/quick';
 
-const unsortedArray: number[] = [5,1,3,4,8,6,7,2,10,9];
+ const unsortedArray: number[] = [5,1,3,4,8,6,7,2,10,9];
+// const unsortedArray: number[] = [3,0,1,8,7,2,5,4,9,6];
 // const almostSortedArray: number[] = [1,2,3,4,5,6,7,9,10,8]
 
 
@@ -29,7 +32,7 @@ RESULTS
 Bubble: 12 swaps and 45 checks
 Selection: 9 swaps and 45 checks
 Insertion: 12 swaps and 20 checks
-Quick: 
+Quick: 4 swaps and 30 checks
 
 
           Almost Sorted
@@ -37,6 +40,6 @@ Quick:
 Bubble: 2 swaps and 45 checks
 Selection: 9 swaps and 45 checks
 Insertion: 2 swaps and 11 checks
-Quick: 
+Quick: 2 swaps and 52 checks
 
 */
