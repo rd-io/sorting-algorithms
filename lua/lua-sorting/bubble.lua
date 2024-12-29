@@ -6,7 +6,6 @@ sort.checks = 0
 sort.swaps = 0
 
 function sort.bubble(array)
-
     print("\nBubble Sort")
 
     local newArray = deepClone(array)

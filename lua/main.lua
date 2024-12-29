@@ -10,7 +10,6 @@ local array = {5,1,3,4,8,6,7,2,10,9}
 local sortedArray = insertionSort.insertion(array)
 
 
-
 local function printArrays(inputArray)
     local res = ""
     for i = 1, #inputArray -1 do
